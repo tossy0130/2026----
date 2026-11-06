@@ -20,13 +20,14 @@
 using namespace std;
 int main(void){
     // Your code here!
-        int arr1[109][109], arr2[109] , H, W, Q, ans2 = 0;
+        int arr1[109][109], arr2[109] , H, W, Q, ans2 = 0, ans1 = 0;
         
         cin >> H >> W;
         
         for(int i = 0; i < H; i++) {
             for(int j = 0; j < W; j++) {
                 cin >> arr1[i][j];
+                ans1 += arr1[i][j];
             }
         }
         
@@ -40,14 +41,14 @@ int main(void){
                 
                 ans2 += arr2[j]; // 累積
             }
-            
-            
+        
             a+=1;
-            
+                
         }
         
-        cout << ans2;
-        
+        // ================== 解答 ==================
+        cout << ans2 << endl;  // 解答 01
+        cout << ans1;          // 解答 02
         
         
 }
